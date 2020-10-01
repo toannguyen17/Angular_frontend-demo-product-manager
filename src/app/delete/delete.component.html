@@ -1,0 +1,10 @@
+<div class="container-xl">
+    <h2>Delete product</h2>
+    <a [routerLink]="['/']" class="btn btn-outline-info mb-3">Back</a>
+    <div class="card">
+        <div class="card-body">
+            <div class="bg-danger p-2 text-white mb-3">Confirm deletion?</div>
+            <button (click)="onDelete()" class="btn btn-outline-danger">Delete</button>
+        </div>
+    </div>
+</div>

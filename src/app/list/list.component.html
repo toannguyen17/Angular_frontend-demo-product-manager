@@ -1,0 +1,29 @@
+<div class="container-xl">
+    <h2>List Product</h2>
+    <div class="text-right mb-3">
+        <a [routerLink]="['create']" class="btn btn-outline-info">Create product</a>
+    </div>
+    <table class="table table-light">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Description</td>
+            <td>Action</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.description }}</td>
+            <td>
+                <a [routerLink]="'/edit/' + product.id" class="btn btn-sm btn-outline-info">Edit</a>
+                <a [routerLink]="'/delete/' + product.id" class="btn btn-sm btn-outline-danger ml-1">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
